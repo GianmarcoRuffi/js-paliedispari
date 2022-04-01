@@ -5,6 +5,8 @@ Sommiamo i due numeri
 Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 Dichiariamo chi ha vinto.*/
 
+// User choice
+
 let userChoice = prompt("Scegli PARI o DISPARI.");
 
 pari = false;
@@ -22,26 +24,13 @@ let userNumber = parseInt(prompt("Scegli un numero compreso tra 1 e 5."));
 
 const numList = ["1", "2", "3", "4", "5"];
 
-const maxNum = 5;
-let cpuNumber = Math.floor(Math.random() * maxNum) + 1;
-console.log("cpunumber: " + cpuNumber);
-
-let allowedNum = false;
-let i = 0;
-
-while (!allowedNum && i != numList.length) {
-  console.log(i);
-
-  if (userNumber === numList[i]) {
-    allowedNum = true;
-  }
-
-  i++;
-}
-
-if (allowedNum) {
+if (numList.includes(userNumber, 0)) {
   console.log("Hai fatto la tua scelta, ora sceglie il pc.");
 } else {
   alert("Reinserisci il numero corretto!");
-  location.reload();
 }
+
+// Cpu choice
+const maxNum = 5;
+let cpuNumber = Math.floor(Math.random() * maxNum) + 1;
+console.log("cpu number: " + cpuNumber);
