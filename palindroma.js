@@ -32,7 +32,7 @@ function checkPalindrome(string) {
 }
 
 //User prompt
-const userString = prompt("Inserisci una parola in soli caratteri minuscoli:");
+const userString = prompt("Inserisci una parola:").toLowerCase();
 
 //Recall the function
 

@@ -12,32 +12,16 @@ function autoRoll() {
   return resultNumber;
 }
 
-//Total user + cpu
-function sum(num1, num2) {
-  let total = num1 + num2;
-  if (total % 2 === 0) {
-    return true;
-  }
-  return false;
-}
-
 // User choice : even or odd
 
 let userChoice = prompt("Scegli PARI o DISPARI.");
 
-pari = false;
-
-if (userChoice === "pari") {
-  pari = true;
-} else if (userChoice === "dispari") {
-  pari = false;
-} else {
+if (userChoice != "pari" && userChoice != "dispari") {
   alert("Errore! La pagina si ricaricherà e inizierai da capo.");
   location.reload();
 }
 
 console.log("YOU have chosen: " + userChoice);
-console.log(pari);
 
 // CPU number
 
@@ -64,7 +48,7 @@ console.log("YOU have chosen: " + userNumber);
 
 // Total
 
-function total(number1, number2) {
+function sumIsEven(number1, number2) {
   let sum = number1 + number2;
   console.log("Total: " + sum);
   if (sum % 2 === 0) {
@@ -74,11 +58,12 @@ function total(number1, number2) {
   }
 }
 
-let result = total(userNumber, cpuNumber);
+let result = sumIsEven(userNumber, cpuNumber);
 
 console.log(result);
 
-if ((pari = true && result == true)) console.log("Hai vinto con PARI!");
-else if ((pari = false && result == false))
+if (userChoice === "pari" && result) {
+  console.log("Hai vinto con PARI!");
+} else if (userChoice === "dispari" && !result) {
   console.log("Hai vinto con DISPARI!");
-else console.log("Hai perso...");
+} else console.log("Hai perso...");
