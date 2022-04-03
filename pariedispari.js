@@ -31,6 +31,7 @@ if (numList.includes(userNumber, 0)) {
 }
 
 // Cpu choice
+function cpuRoll {
 const maxNum = 5;
 let cpuNumber = Math.floor(Math.random() * maxNum) + 1;
-console.log("cpu number: " + cpuNumber);
+console.log("cpu number: " + cpuNumber);}
