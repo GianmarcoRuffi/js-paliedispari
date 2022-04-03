@@ -26,7 +26,6 @@ console.log("YOU have chosen: " + userChoice);
 // CPU number
 
 let cpuNumber = autoRoll();
-console.log("CPU has chosen: " + cpuNumber);
 
 // User number
 
@@ -45,6 +44,7 @@ if (userNumber > 5 || userNumber < 1) {
 }
 
 console.log("YOU have chosen: " + userNumber);
+console.log("CPU has chosen: " + cpuNumber);
 
 // Total
 
