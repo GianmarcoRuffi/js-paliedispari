@@ -21,7 +21,7 @@ function sum(num1, num2) {
   return false;
 }
 
-// User choice
+// User choice : even or odd
 
 let userChoice = prompt("Scegli PARI o DISPARI.");
 
@@ -39,10 +39,12 @@ if (userChoice === "pari") {
 console.log("YOU have chosen: " + userChoice);
 console.log(pari);
 
-// CPU choice
+// CPU number
 
 let cpuNumber = autoRoll();
 console.log("CPU has chosen: " + cpuNumber);
+
+// User number
 
 let userNumber = parseInt(prompt("Scegli un numero compreso tra 1 e 5."));
 
@@ -59,3 +61,24 @@ if (userNumber > 5 || userNumber < 1) {
 }
 
 console.log("YOU have chosen: " + userNumber);
+
+// Total
+
+function total(number1, number2) {
+  let sum = number1 + number2;
+  console.log("Total: " + sum);
+  if (sum % 2 === 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+let result = total(userNumber, cpuNumber);
+
+console.log(result);
+
+if ((pari = true && result == true)) console.log("Hai vinto con PARI!");
+else if ((pari = false && result == false))
+  console.log("Hai vinto con DISPARI!");
+else console.log("Hai perso...");
